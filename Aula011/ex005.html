@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+    <style>
+        body{
+            background-color:rgb(34, 110, 110);
+        }
+        h1{
+            text-align:center;
+            font:normal 25px Arial;
+        }
+    </style>
+</head>
+<body>
+<h1><strong>Estrangeiro ou natural</strong></h1>
+Digite o país aonde mora:<input type="text" name="paísatual" id="paísatual">
+<p>Digite o país aonde nasceu:<input type="text" name="paísnasc" id="paísnasc"></p>
+<input type="button" value="Verificar" onclick="verificar()">
+<div id="res"></div>
+
+<script>
+    function verificar(){
+        var paísatual = window.document.querySelector('input#paísatual').value.toLowerCase()
+        var paísnasc= window.document.querySelector('input#paísnasc').value.toLowerCase()
+        var res = window.document.querySelector('div#res')
+        res.innerHTML = `<p>O seu país de residência é ${paísatual}`
+        res.innerHTML +=`<p>O seu país de nascimento é ${paísnasc}`
+
+        if(paísatual == paísnasc){
+            res.innerHTML += 'Você é <strong>NATURAL</strong> em seu país atual'
+        }else{
+            res.innerHTML += 'Você é <strong>ESTRANGEIRO</strong> em seu país atual'
+        }
+    }
+</script>
+</body>
+</html>
