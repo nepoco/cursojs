@@ -6,4 +6,6 @@ engordar(p=0){
     this.peso += p
 }
 }
-console.log(amigo.engordar(12),amigo.peso)
+console.log(amigo.engordar(50),amigo.peso)
+
+//teste para o commit
